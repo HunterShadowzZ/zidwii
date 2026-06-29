@@ -1,1 +1,169 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
+html,body{
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+body{
+background:#000;
+color:#fff;
+}
+
+#bg{
+position:fixed;
+inset:0;
+background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920&auto=format&fit=crop") center center/cover no-repeat;
+filter:blur(2px);
+transform:scale(1.05);
+z-index:-3;
+}
+
+#overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.45);
+z-index:-2;
+}
+
+.card{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:360px;
+max-width:92%;
+padding:35px;
+border-radius:28px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.12);
+text-align:center;
+box-shadow:0 0 50px rgba(0,255,255,.15);
+}
+
+#avatar{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #fff;
+box-shadow:0 0 25px cyan;
+margin-bottom:15px;
+}
+
+h1{
+font-size:34px;
+}
+
+.username{
+opacity:.7;
+margin-bottom:15px;
+}
+
+#typing{
+color:#6ff;
+min-height:24px;
+margin-bottom:20px;
+}
+
+.social{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.social a{
+text-decoration:none;
+color:white;
+padding:12px;
+border-radius:14px;
+background:rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.social a:hover{
+transform:scale(1.05);
+background:rgba(255,255,255,.18);
+  }.music{
+margin-top:25px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.1);
+}
+
+.music h3{
+margin-bottom:15px;
+font-weight:600;
+}
+
+#play{
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+font-size:20px;
+cursor:pointer;
+background:#00e5ff;
+color:#000;
+margin-bottom:15px;
+transition:.3s;
+}
+
+#play:hover{
+transform:scale(1.1);
+}
+
+#volume{
+width:100%;
+}
+
+#loading{
+position:fixed;
+inset:0;
+background:#000;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader{
+width:70px;
+height:70px;
+border:6px solid rgba(255,255,255,.2);
+border-top:6px solid cyan;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-bottom:20px;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+@media(max-width:480px){
+
+.card{
+width:92%;
+padding:25px;
+}
+
+h1{
+font-size:28px;
+}
+
+#avatar{
+width:100px;
+height:100px;
+}
+
+  }
